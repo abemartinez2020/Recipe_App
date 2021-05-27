@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imgs/recipe-card_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Recipe App</title>
+</head>
+<body>
+    <header class="hero-section">
+        <div class=" hero-section-overlay">
+            <div class="logo">
+                <img  class= "logo__icon" src="./imgs/bowlicon.png" alt="bowl icon for app logo">
+                <h1 class="logo_title">Recipe App</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" class="search-bar__input" placeholder="search">
+                <button class="search-bar__button">
+                    <img src="./imgs/search-icon.png" alt="search button" class="search-bar__icon">
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <button class = 'new-recipe-button'>New Recipe</button>
+        
+        <div id="flex-container" class="flex-container">
+           
+            <div class="recipe-card-container">
+                <img src="./imgs/recipe-card_icon.png" alt="recipe card icon" class="recipe-card__icon">
+                <div class="recipe-card">
+                    <h2 class="recipe-card__title">Spaghetti</h2>
+                    <span class="recipe-card__description">You have 6 of the 12 ingredients</span>
+                </div>
+    
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="logo">
+            <img  class= "logo__icon" src="./imgs/bowlicon.png" alt="bowl icon for app logo">
+            <h3 class="logo_title">Recipe App</h3>
+        </div>
+     </footer>
+    <script src="./scripts/index-bundle.js"></script>
+</body>
+</html>

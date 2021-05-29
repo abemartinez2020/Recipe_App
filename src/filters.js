@@ -1,10 +1,10 @@
 const filters = {
-    searchText: ''
-}
+  searchText: '',
+};
 
-const getFilters = ()=> filters;
+const getFilters = () => filters;
 
 const setFilters = (updates) => {
-    filters.searchText = updates.searchText;
-}
+  filters.searchText = updates.searchText;
+};
 export { getFilters, setFilters };

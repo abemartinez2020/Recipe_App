@@ -50,7 +50,6 @@ const ingredientCountUpdate = (recipeId) => {
   const ingredientsChecked = recipe.ingredients.filter((ingredient) => ingredient.checked);
   recipe.ingredientCount[0] = recipe.ingredients.length;
   recipe.ingredientCount[1] = ingredientsChecked.length;
-  console.log(recipe.ingredientCount);
   saveRecipes();
 };
 // Update recipe

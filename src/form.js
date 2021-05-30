@@ -10,7 +10,7 @@ const stepsInstructions = document.querySelector('.recipe-instructions__steps');
 const ingredienttoAdd = document.querySelector('.new-ingredient__ingredient');
 const ingredientAddButton = document.querySelector('.new-ingredient__submit');
 const removeRecipeButton = document.querySelector('.delete-section__button');
-const recipeId = Window.location.hash.substring(1);
+const recipeId = window.location.hash.substring(1);
 
 initializeFormPage(recipeId);
 
@@ -46,7 +46,7 @@ window.addEventListener('click', (e) => {
 
 removeRecipeButton.addEventListener('click', () => {
   removeRecipe(recipeId);
-  Window.location.assign('/index.html');
+  window.location.assign('/index.html');
 });
 window.addEventListener('storage', (e) => {
   if (e.key === 'recipes') {

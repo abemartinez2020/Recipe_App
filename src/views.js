@@ -19,7 +19,6 @@ const generateRecipeDOM = (recipe) => {
   recipeIcon.alt = 'recipe card icon';
   recipeIcon.classList.add('recipe-card__icon');
 
-  console.log(recipe);
   // Setup recip title for recipe card
   const recipeTitle = document.createElement('h2');
   if (recipe.title.length > 0) {
@@ -56,7 +55,7 @@ const initializeFormPage = (recipeId) => {
   const recipe = recipes.find((rcpe) => rcpe.id === recipeId);
 
   if (!recipe) {
-    Window.location.assign('/index.html');
+    window.location.assign('/index.html');
   }
 
   recipeTitle.value = recipe.title;

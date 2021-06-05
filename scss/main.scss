@@ -10,11 +10,18 @@
 body {
   width: 100%;
   color: white;
-}
-
-body {
   background-color: $secondary-color;
   font-family: 'Roboto', sans-serif;
+}
+
+#page-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 12rem; /* Footer height */
 }
 
 .hero-section {
@@ -22,73 +29,57 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-}
 
-.hero-section-overlay {
-  background: $secondary-color;
-  background: linear-gradient(
-    180deg,
-    rgba(9, 8, 8, 0) 83%,
-    rgba(9, 8, 8, 1) 100%
-  );
-  padding: 3rem 0 1rem 0;
+  #{&}-section-overlay {
+    background: $secondary-color;
+    background: linear-gradient(
+      180deg,
+      rgba(9, 8, 8, 0) 83%,
+      rgba(9, 8, 8, 1) 100%
+    );
+    padding: 3rem 0 1rem 0;
+  }
 }
 
 .logo {
-  padding: 0.5rem 1.7rem;
-}
+  padding: 0.8rem 1.7rem;
 
-.logo_title {
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 7vw;
-}
+  &_title {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 7vw;
+  }
 
-.logo__icon {
-  width: 10%;
-  display: inline-block;
-  margin: 0 10px;
+  &__icon {
+    width: 10%;
+    display: inline-block;
+    margin: 0 10px;
+  }
 }
 
 .search-bar {
-  position: relative;
   background-color: $main-searchbar;
-  padding: 2.2rem 1.5rem;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 1.5rem 1.5rem;
   width: 100%;
   margin: 50px auto;
-}
+  text-align: center;
 
-.search-bar__input {
-  padding: 0.5rem 1.7rem;
-  display: inline-block;
-  width: 90%;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
+  &__input {
+    padding: 0.5rem 1.7rem;
+    display: inline-block;
+    width: 90%;
+    border-radius: 20px;
 
-.search-bar__input:focus {
-  outline: none;
-}
+    &:focus {
+      outline: none;
+    }
+  }
 
-.search-bar__button {
-  position: absolute;
-  right: 10%;
-  bottom: 25%;
-  background-color: $secondary-color;
-  width: 50px;
-  height: 50px;
-  border-radius: 300px;
-  outline: none;
-  border: none;
-}
-
-.search-bar__button:hover {
-  background-color: $primary-color;
-  cursor: pointer;
-}
-
-.search-bar__icon {
-  width: 70%;
+  &__icon {
+    width: 70%;
+  }
 }
 
 main {
@@ -113,12 +104,12 @@ main {
   margin: 50px auto 20px auto;
   border-radius: 50px;
   transition: background-color 0.5s, color 0.5s;
-}
 
-.new-recipe-button:hover {
-  background-color: $primary-color;
-  color: $font-color;
-  cursor: pointer;
+  &:hover {
+    background-color: $primary-color;
+    color: $font-color;
+    cursor: pointer;
+  }
 }
 
 a:link,
@@ -133,13 +124,11 @@ a:visited {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  /* border: solid red 1px; */
 }
 
 .recipe-card-container {
   text-align: center;
   width: 100%;
-  /* max-width: 500px; */
 }
 
 .recipe-card {
@@ -154,20 +143,20 @@ a:visited {
   border-bottom-right-radius: 50px;
   border-top-left-radius: 50px;
   z-index: 0;
-}
 
-.recipe-card__icon {
-  position: relative;
-  width: 25%;
-  max-width: 80px;
-  min-width: 68px;
-  margin-bottom: -150px;
-  z-index: 1;
-}
+  &__icon {
+    position: relative;
+    width: 25%;
+    max-width: 80px;
+    min-width: 68px;
+    margin-bottom: -150px;
+    z-index: 1;
+  }
 
-.recipe-card__description {
-  display: inline-block;
-  margin-top: 20px;
+  &__description {
+    display: inline-block;
+    margin-top: 20px;
+  }
 }
 
 .empty-message {
@@ -179,14 +168,18 @@ footer {
   margin-top: 70px;
   padding: 1.5rem;
   text-align: center;
-}
 
-footer .logo__icon {
-  width: 5%;
-}
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
-footer .logo_title {
-  font-size: 3vw;
+  & .logo__icon {
+    width: 5%;
+  }
+
+  & .logo_title {
+    font-size: 3vw;
+  }
 }
 
 /*form.html*/
@@ -232,10 +225,10 @@ footer .logo_title {
   display: inline-block;
   width: 85%;
   margin: 50px auto 0 auto;
-}
 
-.recipe-title::placeholder {
-  color: $font-color;
+  &::placeholder {
+    color: $font-color;
+  }
 }
 
 .form-flex-container {
@@ -250,21 +243,19 @@ footer .logo_title {
   padding: 1rem;
   width: 100%;
   text-align: center;
-}
 
-.recipe-instructions__steps {
-  background: $secondary-color;
-  margin-top: 30px;
-  border: none;
-  color: white;
-  width: 100%;
-}
+  &__title {
+    font-weight: regular;
+  }
 
-.recipe-instructions__title {
-  font-weight: regular;
+  &__steps {
+    background: $secondary-color;
+    margin-top: 30px;
+    border: none;
+    color: white;
+    width: 100%;
+  }
 }
-
-/* Ingredient List */
 
 .ingredient-line__checkbox {
   opacity: 0;
@@ -275,16 +266,20 @@ footer .logo_title {
   z-index: 1;
 }
 
-.ingredient-line__ingredient {
-  display: inline-block;
-  position: relative;
-  width: 250px;
-  flex-grow: 2;
-  justify-self: flex-end;
-  padding-left: 1em;
-  text-align: start;
+.ingredient-list {
+  margin-top: 50px;
+  padding: 1rem 0.2rem;
+  width: 100%;
 }
 
+.ingredient-list__ingredient-line {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+//styling checkbox by making it disapear and creating one with before and after pseudo elements
 .ingredient-line__ingredient::before {
   content: '';
   position: absolute;
@@ -329,6 +324,16 @@ footer .logo_title {
   top: 0;
 }
 
+.ingredient-line__ingredient {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  flex-grow: 2;
+  justify-self: flex-end;
+  padding-left: 1em;
+  text-align: start;
+}
+
 .ingredient-line__remove-button {
   display: inline-block;
   background-color: $secondary-color;
@@ -338,38 +343,24 @@ footer .logo_title {
   width: 66%;
   flex-grow: 2;
   text-align: end;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.ingredient-line__remove-button:hover {
-  cursor: pointer;
-}
-
-.ingredient-list__ingredient-line {
-  margin-top: 30px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.ingredient-list {
-  margin-top: 50px;
-  padding: 1rem 0.2rem;
-  width: 100%;
-}
-
-/* New Ingredients*/
 .new-ingredient {
   margin-top: 30px;
   width: 75%;
   text-align: center;
-}
 
-.new-ingredient__ingredient {
-  padding: 0.3rem;
-}
+  &__ingredient {
+    padding: 0.3rem;
 
-.new-ingredient__ingredient:focus {
-  outline: $primary-color solid 0.5px;
+    &:focus {
+      outline: $primary-color solid 0.5px;
+    }
+  }
 }
 
 .new-ingredient__submit {
@@ -381,35 +372,35 @@ footer .logo_title {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   transition: background-color 0.5s;
-}
 
-.new-ingredient__submit:hover {
-  background-color: $secondary-color;
-  cursor: pointer;
+  &:hover {
+    background-color: $secondary-color;
+    cursor: pointer;
+  }
 }
 
 .delete-section {
   margin: 100px auto;
   text-align: center;
-}
 
-.delete-section__title {
-  font-weight: 400;
-  color: #c7d080;
-}
+  &__title {
+    font-weight: 400;
+    color: #c7d080;
+  }
 
-.delete-section__button {
-  margin-top: 10px;
-  background-color: #c7d080;
-  padding: 0.4rem 1.5rem;
-  outline: none;
-  border: none;
-}
+  &__button {
+    margin-top: 10px;
+    background-color: #c7d080;
+    padding: 0.4rem 1.5rem;
+    outline: none;
+    border: none;
 
-.delete-section__button:hover {
-  cursor: pointer;
-  background-color: $secondary-color;
-  color: var(--font-color);
+    &:hover {
+      cursor: pointer;
+      background-color: $secondary-color;
+      color: var(--font-color);
+    }
+  }
 }
 
 /*Responsive Rules */

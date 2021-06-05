@@ -9,51 +9,55 @@
     <title>Form</title>
 </head>
 <body>
-    <header class=" hero-section hero-section_form">
-        <div class=" hero-section-overlay">
-            <div class="logo_form">
-                <a href="./index.html">
-                    <img  class= "logo_icon_form" src="./imgs/bowlicon.png" alt="bowl icon for app logo">
-                    <h1 class="logo_title_form">Recipe App</h1>
-                </a>
-
-            </div>
-            <div class="input-recipe">
-                <input type="text" class="recipe-title" placeholder="Recipe Title">
-            </div>
-        </div>
-    </header>
-    <main class="flex-container">
-        <div class="form-flex-container">
-            <div class="recipe-instructions">
-                <h2 class="recipe-instructions__title">Steps</h2>
-                <textarea type="text" class="recipe-instructions__steps" rows="15" placeholder="Add your recipe instructions here..."></textarea>
-            </div>
-            <section class="ingredient-list">
-                <h2 class="ingredient-list__title">Ingredients</h2>
-                <div class="ingredient-block">
-                    <div class="ingredient-list__ingredient-line">
+    <div id="page-container">
+        <div id="content-wrap">
+            <header class=" hero-section hero-section_form">
+                <div class=" hero-section-overlay">
+                    <div class="logo_form">
+                        <a href="./index.html">
+                            <img  class= "logo_icon_form" src="./imgs/bowlicon.png" alt="bowl icon for app logo">
+                            <h1 class="logo_title_form">Recipe App</h1>
+                        </a>
+        
                     </div>
-                </div>  
-            </section>
+                    <div class="input-recipe">
+                        <input type="text" class="recipe-title" placeholder="Recipe Title">
+                    </div>
+                </div>
+            </header>
+            <main class="flex-container">
+                <div class="form-flex-container">
+                    <div class="recipe-instructions">
+                        <h2 class="recipe-instructions__title">Steps</h2>
+                        <textarea type="text" class="recipe-instructions__steps" rows="15" placeholder="Add your recipe instructions here..."></textarea>
+                    </div>
+                    <section class="ingredient-list">
+                        <h2 class="ingredient-list__title">Ingredients</h2>
+                        <div class="ingredient-block">
+                            <div class="ingredient-list__ingredient-line">
+                            </div>
+                        </div>  
+                    </section>
+                </div>
+                <div class="new-ingredient">
+                    <input type="text" class="new-ingredient__ingredient" placeholder="New Ingredient">
+                    <button class="new-ingredient__submit">ADD</button>
+                </div>
+                <div class="delete-section">
+                    <h3 class="delete-section__title">Danger Zone</h3>
+                    <button class="delete-section__button"> Delete Recipe</button>
+                </div>
+            </main>
         </div>
-        <div class="new-ingredient">
-            <input type="text" class="new-ingredient__ingredient" placeholder="New Ingredient">
-            <button class="new-ingredient__submit">ADD</button>
-        </div>
-        <div class="delete-section">
-            <h3 class="delete-section__title">Danger Zone</h3>
-            <button class="delete-section__button"> Delete Recipe</button>
-        </div>
-    </main>
-    <footer>
-        <div class="logo">
-            <a href="./index.html">
-                <img  class= "logo__icon" src="./imgs/bowlicon.png" alt="bowl icon for app logo">
-                <h3 class="logo_title">Recipe App</h3>
-            </a>
-        </div>
-     </footer>
+        <footer>
+            <div class="logo">
+                <a href="./index.html">
+                    <img  class= "logo__icon" src="./imgs/bowlicon.png" alt="bowl icon for app logo">
+                    <h3 class="logo_title">Recipe App</h3>
+                </a>
+            </div>
+         </footer>
+    </div>
     <script src='./scripts/form-bundle.js'></script>
 </body>
 </html>
